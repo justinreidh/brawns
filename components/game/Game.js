@@ -89,14 +89,14 @@ export default function Game() {
   
 
   return (
-    <div className="text-center p-8 min-h-screen bg-gray-100">
+    <div className="text-center p-8 min-h-screen">
       <h1 className="text-3xl font-bold mb-4">Reverse Digit Span Test</h1>
       <p className="text-lg mb-4">Round: {round}</p>
 
       {!isRoundActive && !gameOver && (
         <div>
           {round == 1 ? (
-            <p className="text-lg mb-2">Click "Start Round" to begin!</p>
+            <p className="text-lg mb-2 text-gray-600">Click "Start Round" to begin!</p>
           ) : (
             <div>
               <p className="text-lg mb-2">Get ready for Round {round}!</p>
@@ -115,7 +115,7 @@ export default function Game() {
       {isRoundActive && (
         <div>
           {showDigits && (
-            <p className="my-4 text-lg text-gray-600">Watch the digits!</p>
+            <p className="my-4 text-lg text-gray-600">Watch the numbers!</p>
           )}
           <DigitDisplay
             digit={showDigits && currentDigitIndex < digits.length ? digits[currentDigitIndex] : null}

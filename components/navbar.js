@@ -6,8 +6,8 @@ export default function Navbar() {
     <nav className="bg-blue-500 text-white p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         
-        <Link href="/" className="text-2xl font-bold">
-          Brawns
+        <Link href="/" className="text-3xl font-bold">
+          Brawn
         </Link>
 
         
