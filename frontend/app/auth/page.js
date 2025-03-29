@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useRouter } from 'next/navigation';
 
@@ -12,10 +12,11 @@ export default function AuthPage() {
   const { login, register, user } = useContext(AuthContext);
   const router = useRouter();
 
-  if (user) {
-    router.push('/game');
-    return null;
-  }
+  useEffect(() => {
+    if (user) {
+      router.push('/game');
+    }
+  }, [user, router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,6 +34,11 @@ export default function AuthPage() {
       setError(err.response?.data?.message || 'An error occurred');
     }
   };
+
+  
+  if (user) {
+    return null;
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">

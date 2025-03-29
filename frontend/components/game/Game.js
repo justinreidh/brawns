@@ -76,7 +76,6 @@ export default function Game() {
       setFeedback('Wrong! Game Over.');
       setGameOver(true);
       setIsRoundActive(false);
-      // Save the score (highest round reached)
       try {
         await axios.post('http://localhost:4000/api/scores', { value: round });
       } catch (error) {
@@ -98,6 +97,10 @@ export default function Game() {
     setIsRoundActive(false);
     setDigits([]);
   };
+
+  if (!user) {
+    return null; // Prevent rendering while redirecting
+  }
 
   return (
     <div className="text-center p-8 min-h-screen bg-gray-100">

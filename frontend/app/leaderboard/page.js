@@ -40,6 +40,10 @@ export default function Leaderboard() {
     fetchUserScores();
   }, [user, router]);
 
+  if (!user) {
+    return null; 
+  }
+
   return (
     <div className="text-center p-8 min-h-screen bg-gray-100">
       <div className="flex justify-between items-center mb-6">
