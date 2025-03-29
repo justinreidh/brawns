@@ -104,20 +104,9 @@ export default function Game() {
 
   return (
     <div className="text-center p-8 min-h-screen bg-gray-100">
-      <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">Digit Reversal Game</h1>
-        {user && (
-          <div className="flex gap-4">
-            <p className="text-lg">Welcome, {user.username}!</p>
-            <button
-              onClick={logout}
-              className="px-4 py-2 bg-gray-500 text-white rounded-md hover:bg-gray-600 transition"
-            >
-              Logout
-            </button>
-          </div>
-        )}
-      </div>
+      
+      <h1 className="text-3xl font-bold mb-4">Reverse Digit Span Test</h1>
+       
       <p className="text-lg mb-4">Round: {round}</p>
 
       {!isRoundActive && !gameOver && (
