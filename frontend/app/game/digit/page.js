@@ -1,7 +1,9 @@
+import Game from "@/components/game/Game"
+
 export default function GamesPage() {
     return (
         <div>
-            <h1>Games:</h1>
+            <Game />
         </div>
     )
 }
