@@ -142,10 +142,10 @@ export default function Game() {
       <Feedback message={feedback} />
 
       {gameOver && (
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 items-center">
           <button
             onClick={restartGame}
-            className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+            className="mt-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition w-40"
           >
             Restart Game
           </button>
